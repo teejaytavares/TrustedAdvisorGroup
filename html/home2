@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trusted Advisor Group - Transform Your Trades Business</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid #1e3a8a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1e40af;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3b82f6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #dc2626;
+        }
+
+        .cta-button:hover {
+            background: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .section {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            border-top: 4px solid #3b82f6;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #3b82f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .approach {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .approach h2 {
+            color: #1e3a8a;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .approach-item {
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #3b82f6;
+        }
+
+        .approach-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #1e40af;
+            font-weight: 600;
+        }
+
+        .approach-item p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        .consultation {
+            background: #1e40af;
+            color: white;
+            text-align: center;
+        }
+
+        .consultation h2 {
+            color: white;
+        }
+
+        .consultation-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .consultation p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .consultation-form {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: #dc2626;
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #b91c1c;
+        }
+
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .services-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fade-in {
+            /* Removed fade-in styles */
+        }
+
+        .fade-in.visible {
+            /* Removed fade-in styles */
+        }
+
+        /* Ensure approach section items are visible */
+        .approach .fade-in {
+            /* Removed fade-in styles */
+        }
+
+        .approach .fade-in.visible {
+            /* Removed fade-in styles */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Trusted Advisor Group</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#approach">Our Approach</a></li>
+                <li><a href="#consultation">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Trades Business</h1>
+                <p>Expert consulting for contractors, electricians, plumbers, and skilled trades professionals ready to maximize prosperity through strategic exits, tax optimization, and sustainable growth.</p>
+                <a href="#consultation" class="cta-button">Start Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Specialized Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Business Exit Strategy</h3>
+                    <p>Prepare your trades business for a successful and profitable exit. We help you maximize value, structure the deal properly, and ensure a smooth transition that protects your legacy and financial future.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>Tax Strategy Optimization</h3>
+                    <p>Minimize your tax burden legally and strategically. Our proven tax strategies are specifically designed for trades businesses, helping you keep more of what you earn while staying compliant.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Sustainable Growth Planning</h3>
+                    <p>Build systems and strategies that drive consistent, profitable growth. We help you scale your operations, improve efficiency, and create sustainable competitive advantages in your market.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="section approach">
+        <div class="container">
+            <h2>Our Proven Approach</h2>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 3rem; text-align: center; color: #4b5563;">We combine decades of expertise with analytical precision to transform your business challenges into opportunities. No pressure, no confusion—just clear guidance and proven results.</p>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <h3>Analytical Rigor</h3>
+                    <p>We dig deep into your numbers, operations, and market position to understand exactly where you stand and where you can improve.</p>
+                </div>
+                <div class="approach-item">
+                    <h3>Diagnostic Precision</h3>
+                    <p>Our comprehensive assessment identifies specific opportunities and challenges unique to your trades business.</p>
+                </div>
+                <div class="approach-item">
+                    <h3>Visionary Thinking</h3>
+                    <p>We help you see beyond today's challenges to build a strategic roadmap for long-term success and prosperity.</p>
+                </div>
+                <div class="approach-item">
+                    <h3>Flexible Engagement</h3>
+                    <p>No long-term contracts. Work with us at your pace, typically 8 weeks, with the freedom to adjust as your needs evolve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consultation" class="section consultation">
+        <div class="container">
+            <div class="consultation-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Let's have a straightforward conversation about your goals. No high-pressure tactics, no confusing handoffs—just honest advice from experienced consultants who understand your industry.</p>
+                
+                <div class="consultation-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Name</label>
+                            <input type="text" id="business" name="business" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="trade">Type of Trade</label>
+                            <select id="trade" name="trade" required>
+                                <option value="">Select your trade</option>
+                                <option value="electrical">Electrical</option>
+                                <option value="plumbing">Plumbing</option>
+                                <option value="hvac">HVAC</option>
+                                <option value="construction">General Construction</option>
+                                <option value="roofing">Roofing</option>
+                                <option value="flooring">Flooring</option>
+                                <option value="landscaping">Landscaping</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="priority">What's your top priority?</label>
+                            <select id="priority" name="priority" required>
+                                <option value="">Select your main focus</option>
+                                <option value="exit">Planning for business exit/sale</option>
+                                <option value="tax">Optimizing tax strategy</option>
+                                <option value="growth">Driving sustainable growth</option>
+                                <option value="multiple">Multiple areas of focus</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell us about your current situation</label>
+                            <textarea id="message" name="message" placeholder="What challenges are you facing? What are your goals?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Request Consultation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Trusted Advisor Group. Transforming trades businesses through expert consulting.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handling
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation and feedback
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const business = formData.get('business');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            
+            if (name && business && phone && email) {
+                alert(`Thank you, ${name}! We'll contact you within 24 hours to schedule your consultation. We look forward to discussing how we can help ${business} achieve its goals.`);
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation and feedback
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const business = formData.get('business');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            
+            if (name && business && phone && email) {
+                alert(`Thank you, ${name}! We'll contact you within 24 hours to schedule your consultation. We look forward to discussing how we can help ${business} achieve its goals.`);
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
