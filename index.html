@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f8f9fa;
             min-height: 100vh;
         }
 
@@ -26,12 +26,12 @@
         }
 
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 3px solid #1e3a8a;
         }
 
         nav {
@@ -44,7 +44,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            color: #2c3e50;
+            color: #1e3a8a;
             text-decoration: none;
         }
 
@@ -56,22 +56,21 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #2c3e50;
+            color: #1e40af;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: #3b82f6;
         }
 
         .hero {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
             color: white;
             padding: 6rem 0;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
 
         .hero::before {
@@ -81,8 +80,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
         }
 
         .hero-content {
@@ -91,38 +89,35 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            opacity: 0.95;
         }
 
         .cta-button {
             display: inline-block;
-            background: #e74c3c;
+            background: #dc2626;
             color: white;
             padding: 1rem 2.5rem;
             text-decoration: none;
-            border-radius: 50px;
+            border-radius: 5px;
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+            border: 2px solid #dc2626;
         }
 
         .cta-button:hover {
-            background: #c0392b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+            background: #b91c1c;
+            border-color: #b91c1c;
         }
 
         .section {
@@ -135,11 +130,11 @@
         }
 
         .section h2 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             text-align: center;
             margin-bottom: 3rem;
-            color: #2c3e50;
-            position: relative;
+            color: #1e3a8a;
+            font-weight: 600;
         }
 
         .section h2::after {
@@ -148,9 +143,9 @@
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 60px;
+            height: 3px;
+            background: #3b82f6;
             border-radius: 2px;
         }
 
@@ -164,22 +159,22 @@
         .service-card {
             background: white;
             padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
-            border: 1px solid #e0e0e0;
+            border: 1px solid #e5e7eb;
+            border-top: 4px solid #3b82f6;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
         }
 
         .service-icon {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
+            background: #3b82f6;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -189,24 +184,25 @@
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
-            color: #2c3e50;
+            color: #1e3a8a;
+            font-weight: 600;
         }
 
         .service-card p {
-            color: #666;
+            color: #4b5563;
             line-height: 1.7;
         }
 
         .approach {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            color: white;
-            text-align: center;
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .approach h2 {
-            color: white;
+            color: #1e3a8a;
         }
 
         .approach-grid {
@@ -218,25 +214,26 @@
 
         .approach-item {
             padding: 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border-left: 4px solid #3b82f6;
         }
 
         .approach-item h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
-            color: #ecf0f1;
+            color: #1e40af;
+            font-weight: 600;
         }
 
         .approach-item p {
-            color: rgba(255, 255, 255, 0.9);
+            color: #4b5563;
             line-height: 1.6;
         }
 
         .consultation {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #1e40af;
             color: white;
             text-align: center;
         }
@@ -251,17 +248,17 @@
         }
 
         .consultation p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 2rem;
-            opacity: 0.95;
         }
 
         .consultation-form {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
             padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
+            border-radius: 8px;
             margin-top: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -280,10 +277,18 @@
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
-            border: none;
-            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
             font-size: 1rem;
-            background: rgba(255, 255, 255, 0.9);
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
 
         .form-group textarea {
@@ -292,11 +297,11 @@
         }
 
         .submit-btn {
-            background: #e74c3c;
+            background: #dc2626;
             color: white;
             padding: 1rem 3rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 5px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
@@ -304,12 +309,11 @@
         }
 
         .submit-btn:hover {
-            background: #c0392b;
-            transform: translateY(-2px);
+            background: #b91c1c;
         }
 
         footer {
-            background: #2c3e50;
+            background: #1e3a8a;
             color: white;
             text-align: center;
             padding: 2rem 0;
@@ -335,14 +339,20 @@
         }
 
         .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+            /* Removed fade-in styles */
         }
 
         .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            /* Removed fade-in styles */
+        }
+
+        /* Ensure approach section items are visible */
+        .approach .fade-in {
+            /* Removed fade-in styles */
+        }
+
+        .approach .fade-in.visible {
+            /* Removed fade-in styles */
         }
     </style>
 </head>
@@ -370,19 +380,19 @@
 
     <section id="services" class="section">
         <div class="container">
-            <h2 class="fade-in">Our Specialized Services</h2>
+            <h2>Our Specialized Services</h2>
             <div class="services-grid">
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">🚀</div>
                     <h3>Business Exit Strategy</h3>
                     <p>Prepare your trades business for a successful and profitable exit. We help you maximize value, structure the deal properly, and ensure a smooth transition that protects your legacy and financial future.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">💰</div>
                     <h3>Tax Strategy Optimization</h3>
                     <p>Minimize your tax burden legally and strategically. Our proven tax strategies are specifically designed for trades businesses, helping you keep more of what you earn while staying compliant.</p>
                 </div>
-                <div class="service-card fade-in">
+                <div class="service-card">
                     <div class="service-icon">📈</div>
                     <h3>Sustainable Growth Planning</h3>
                     <p>Build systems and strategies that drive consistent, profitable growth. We help you scale your operations, improve efficiency, and create sustainable competitive advantages in your market.</p>
@@ -393,22 +403,22 @@
 
     <section id="approach" class="section approach">
         <div class="container">
-            <h2 class="fade-in">Our Proven Approach</h2>
-            <p class="fade-in" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 3rem;">We combine decades of expertise with analytical precision to transform your business challenges into opportunities. No pressure, no confusion—just clear guidance and proven results.</p>
+            <h2>Our Proven Approach</h2>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 3rem; text-align: center; color: #4b5563;">We combine decades of expertise with analytical precision to transform your business challenges into opportunities. No pressure, no confusion—just clear guidance and proven results.</p>
             <div class="approach-grid">
-                <div class="approach-item fade-in">
+                <div class="approach-item">
                     <h3>Analytical Rigor</h3>
                     <p>We dig deep into your numbers, operations, and market position to understand exactly where you stand and where you can improve.</p>
                 </div>
-                <div class="approach-item fade-in">
+                <div class="approach-item">
                     <h3>Diagnostic Precision</h3>
                     <p>Our comprehensive assessment identifies specific opportunities and challenges unique to your trades business.</p>
                 </div>
-                <div class="approach-item fade-in">
+                <div class="approach-item">
                     <h3>Visionary Thinking</h3>
                     <p>We help you see beyond today's challenges to build a strategic roadmap for long-term success and prosperity.</p>
                 </div>
-                <div class="approach-item fade-in">
+                <div class="approach-item">
                     <h3>Flexible Engagement</h3>
                     <p>No long-term contracts. Work with us at your pace, typically 8 weeks, with the freedom to adjust as your needs evolve.</p>
                 </div>
@@ -419,10 +429,10 @@
     <section id="consultation" class="section consultation">
         <div class="container">
             <div class="consultation-content">
-                <h2 class="fade-in">Ready to Transform Your Business?</h2>
-                <p class="fade-in">Let's have a straightforward conversation about your goals. No high-pressure tactics, no confusing handoffs—just honest advice from experienced consultants who understand your industry.</p>
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Let's have a straightforward conversation about your goals. No high-pressure tactics, no confusing handoffs—just honest advice from experienced consultants who understand your industry.</p>
                 
-                <div class="consultation-form fade-in">
+                <div class="consultation-form">
                     <form>
                         <div class="form-group">
                             <label for="name">Your Name</label>
@@ -492,26 +502,24 @@
             });
         });
 
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
         // Form submission handling
         document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation and feedback
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const business = formData.get('business');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            
+            if (name && business && phone && email) {
+                alert(`Thank you, ${name}! We'll contact you within 24 hours to schedule your consultation. We look forward to discussing how we can help ${business} achieve its goals.`);
+                this.reset();
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Simple form validation and feedback
@@ -540,5 +548,7 @@
             });
         });
     </script>
+</body>
+</html>
 </body>
 </html>
